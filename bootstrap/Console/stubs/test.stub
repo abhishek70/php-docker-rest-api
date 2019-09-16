@@ -1,0 +1,54 @@
+<?php
+
+namespace DummyNamespace;
+
+use PHPUnit\Framework\TestCase;
+
+/**
+ * Class DummyClass
+ * @package DummyNamespace
+ */
+class DummyClass extends TestCase
+{
+    /**
+     * Called before the first test of the test case class is run
+     */
+    public static function setUpBeforeClass(): void
+    {
+        //TODO
+    }
+
+    /**
+     * Called once for each test method
+     */
+    protected function setUp(): void
+    {
+        //TODO
+    }
+
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+        //TODO
+    }
+
+    /**
+     * Called once for each test method
+     */
+    protected function tearDown(): void
+    {
+        //TODO
+    }
+
+    /**
+     * Called after the last test of the test case class is run
+     */
+    public static function tearDownAfterClass(): void
+    {
+        //TODO
+    }
+}

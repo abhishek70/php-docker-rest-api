@@ -1,0 +1,9 @@
+.git
+.gitignore
+test-results.xml
+.editorconfig
+.env.example
+.gitattributes
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php

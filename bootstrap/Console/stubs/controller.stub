@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Class DummyClass
+ * @package Controllers
+ *
+ */
+class DummyClass
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return TODO: edit return
+     */
+    public function index()
+    {
+        //TODO
+        return;
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param int $id Id {@min 1}
+     *
+     * @return TODO: edit return
+     */
+     public function get($id)
+     {
+        //TODO
+        return;
+     }
+
+    /**
+     * Creating a new resource.
+     *
+     *
+     * @return TODO: edit return
+     */
+    public function post()
+    {
+        //TODO
+        return;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id Id {@min 1}
+     *
+     * @return TODO: edit return
+     */
+    public function delete($id)
+    {
+        //TODO
+        return;
+    }
+}
