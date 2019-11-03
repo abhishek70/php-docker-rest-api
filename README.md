@@ -81,6 +81,8 @@ http://localhost:8000/apidocs/
 docker-compose exec -T restapi php ./vendor/bin/phpunit --log-junit test-results.xml
 ```
 
+![image](https://github.com/abhishek70/php-docker-rest-api/blob/master/screenshots/apidocs.png)
+
 ## Official documentation
 [Luracast/Laravel-Database](https://github.com/Luracast/Laravel-Database)
 
