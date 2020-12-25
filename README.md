@@ -71,9 +71,24 @@ cp .env.example .env
 docker-compose up -d
 ```
 
+## Steps for running application on localhost using docker with SSL
+1. Create self-signed SSL certificate for localhost domain
+2. Self-signed SSL certificate creates *.crt and *.key files
+3. Rename *.crt with server.crt and *.key with server.key if files created in step 2 are with different name
+4. Copy server.crt and server.key files to the root directory
+
+**Note - Using self-signed SSL certificate for production environment is not recommended.
+
+* Run below docker-compose command to build the container with HTTP(S)
+```
+docker-compose -f docker-compose.local.yml up -d
+```
+
 ## Swagger documentation
 ```
-http://localhost:8000/apidocs/
+http://localhost:3000/apidocs/
+
+https://localhost:8085/apidocs/
 ```
 
 ## Execute unit and integration tests using PHPUnit

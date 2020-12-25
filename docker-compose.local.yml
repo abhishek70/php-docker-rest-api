@@ -1,0 +1,40 @@
+version: '3'
+services:
+    restdb:
+        image: mysql/mysql-server:5.6
+        networks:
+            - restapi-network
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USERNAME}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+        expose:
+            - "5432"
+        ports:
+            - "5432:3306"
+    restapi:
+        build:
+            context: .
+            dockerfile: Dockerfile.local
+        image: php-rest-api:${TAG}
+        networks:
+            - restapi-network
+        volumes:
+            - .:/var/www/html
+        depends_on:
+            - restdb
+        restart: always
+        ports:
+            - "3000:80"
+            - "8085:443"
+        environment:
+            - APP_ENV=${APP_ENV}
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USERNAME=${MYSQL_USERNAME}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_PORT=${MYSQL_PORT}
+networks:
+    restapi-network:

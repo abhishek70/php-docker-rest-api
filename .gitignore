@@ -6,3 +6,5 @@ composer.phar
 Thumbs.db
 .idea
 test-results.xml
+server.crt
+server.key
